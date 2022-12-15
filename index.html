@@ -3,215 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name ="viewport" content="width=device-width, initial-scale=1">
-    <!-- CV - Curriculum Vitae -->
-    <title>CV</title>
+    <!-- Online shop -->
+    <title>Shopify</title>
     <!-- CSS file -->
     <link href="style.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥴</text></svg>">
     <!-- Bootstrap 5.2 library -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- Vue.js 3 library -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!--Howler.js-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body class="color-aliceblue jet-brains">
-    <!-- div block with id #app is for Vue.js library's work -->
+<body>
     <div id="app">
-        <!-- web-page for your CV -->
-        <div class="page-container" id="cv-container" v-if="id === 'cv-container'">
-            <!-- Navbar -->
-            <header class="nav d-flex align-items-center site-panel">
-                <a class="nav-link" href="#" @click="cv_toggle">CV</a>
-                <a class="nav-link" href="#" @click="form_toggle">Form</a>
-                <a class="nav-link" href="#" @click="projects_toggle">Pet projects</a>
-                <a class="nav-link" href="#" @click="bg_select">Credits</a>
-            </header>
-            <!-- Main content (the entire web-page, excluding navbar) -->
-            <div class="site-panel row under-site" id="main-content">
-                <!-- Main panel (container of main text data) -->
-                <div class="col-sm-12 col-lg-9" id="main-panel">
-                    <table class="table table-striped">
-                        <tr>
-                            <th class="text-center">Company</th>
-                            <th class="text-center">Vacancy</th>
-                            <th class="text-center">Duration of work</th>
-                        </tr>
-                        <tr>
-                            <td class="text-center">BTS</td>
-                            <td class="text-center">Junior Front-end developer</td>
-                            <td class="text-center">2 years</td>
-                        </tr>
-                    </table>
-                    <h6 class="list-name">Social networks</h6>
-                    <ul class="main-list" id="social-list">
-                        <li class="network-bullet"><a class="network-link" href="https://github.com/Az1mzhan">Github</a></li>
-                        <li class="network-bullet"><a class="network-link" href="https://t.me/Az1mzhan">Telegram</a></li>
-                        <li class="network-bullet"><a class="network-link" href="https://wa.me/77782223678">WhatsApp</a></li>
-                    </ul>
-                    <h6 class="list-name">Experience</h6>
-                    <dl id="experience-list">
-                        <dt>Fufelschmerz Inc.</dt>
-                        <dd>- 5 years</dd>
-                        <dt>Arasaka Corporation</dt>
-                        <dd>- 4 years</dd>
-                        <dt>Oscorp</dt>
-                        <dd>- 2 years</dd>
-                        <dt>Umbrella Corp.</dt>
-                        <dd>- 3 years</dd>
-                        <dt>Wayne Enterprises</dt>
-                        <dd>- half a year</dd>
-                    </dl>
-                </div>
-                <!-- Side panel (the panel on the right side) -->
-                <div class="col-sm-12 col-lg-3" id="side-panel">
-                    <h6 class="side-list-name">Skills</h6>
-                    <ul class="side-list" id="technologies-list">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>SASS</li>
-                        <li>Bootstrap</li>
-                        <li>JS</li>
-                        <li>jQuery</li>
-                        <li>Vue.js</li>
-                        <li>NPM</li>
-                        <li>Gulp</li>
-                    </ul>
-                    <h6 class="side-list-name">Hobbies</h6>
-                    <ul class="side-list" id="hobby-list">
-                        <li>Reading</li>
-                        <li>Coding</li>
-                        <li>Creating media presentations</li>
-                    </ul>
-                </div>
+        <nav class="d-flex position-sticky">
+            <a class="nav-title">Shopify</a>
+            <div class="d-flex myNav" id="nav-collapse">
+                <a href="#hardware">Hardware</a>
+                <a href="#devices">Devices</a>
+                <a href="#accessories">Accessories</a>
+                <a class="icon">
+                    <i class="fa fa-bars"></i>
+                </a>
             </div>
-            <footer class="d-flex justify-content-center">
-                <div class="d-flex text-center" id="contacts-container">
-                    <p class="footer-heading" id="contacts-heading">Contacts</p>
-                    <a href="#"><img src="img/instagram.png" alt="instagram" class="network-icon" id="insta-icon"></a>
-                    <a href="#"><img src="img/facebook.png" alt="facebook" class="network-icon" id="fb-icon"></a>
-                    <a href="#"><img src="img/snapchat.png" alt="snapchat" class="network-icon" id="snapchat-icon"></a>
-                </div>
-                <div id="navigate-container">
-                    <p class="footer-heading" id="navigate-heading">Navigate</p>
-                    <ul class="footer-list without-bullet" id="navigate-list">
-                        <li><a href="#">CV</a></li>
-                        <li><a href="#">Form</a></li>
-                        <li><a href="#">Pet projects</a></li>
-                        <li><a href="#">Credits</a></li>
-                    </ul>
-                </div>
-                <div id="help-container">
-                    <p class="footer-heading" id="help-heading">Help & FAQ</p>
-                    <ul class="footer-list without-bullet" id="help-list">
-                        <li><a href="#">List of web technologies</a></li>
-                        <li><a href="#">Issue tracking</a></li>
-                        <li><a href="#">Career perspectives</a></li>
-                    </ul>
-                </div>
-                <div class="break"></div>
-                <div id="copyright-container">
-                    <p class="footer-heading bold-text italic-text" id="copyright-heading">Azimzhan Mussabayev, 2022. All rights are reserved. ©</p>
-                </div>
-                <div class="break"></div>
-            </footer>
-        </div>
-        <!-- web-page for user form -->
-        <div class="page-container" id="form-container" v-if="id === 'form-container'">
-            <!-- Form block -->
-            <div id="form">
-                <form id="myForm" name="myForm" method="get" onsubmit="formSubmit()">
-                    <div class="d-flex form-label">
-                        <p class="label-text">Username</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="text" id="user" checked>
-                    </div>
-                    <div class="d-flex form-label">
-                        <p class="label-text">Password</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="password" id="password" checked>
-                    </div>
-                    <div class="d-flex form-label">
-                        <p class="label-text">Email</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="email" id="email" checked>
-                    </div>
-                    <div class="d-flex form-label" id="name-lav">
-                        <p class="label-text">Name</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="text" id="name" checked>
-                    </div>
-                    <div class="d-flex form-label">
-                        <p class="label-text">Surname</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="text" id="surname" checked>
-                    </div>
-                    <div class="d-flex form-label">
-                        <p class="label-text">Birthday date</p><sup class="req-star">*</sup>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input type="date" id="bday" checked>
-                    </div>
-                    <div class="d-flex justify-content-center form-block">
-                        <input class="input-btn" type="submit" id="submit" value="Submit" checked>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="page-container d-flex" id="projects-container" v-if="id === 'projects-container'">
-            <button class="carousel-3d-btn" id="left-carousel-btn" @click="carousel3d_prev"> < </button>
-            <div class="card" id="trello-card">
-                <img src="img/todo.jpg" alt="todo" class="card-img-top">
+        </nav>
+        <div class="d-flex justify-content-center" id="flex-table">
+            <div class="card">
+                <img src="img/hyperx_cloud_core_7.1.jpg" alt="HyperX Cloud" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">Trello</h5>
-                    <p class="card-text">Lorem Ipsum</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" @click="time_toggle">Continue</a>
-                    </div>
+                    <div class="card-title">HyperX Cloud Core 7.1</div>
+                    <div class="card-text">Headset</div>
                 </div>
             </div>
-            <div class="card" id="time-manager-card">
-                <img src="img/stopwatch.jpg" alt="stopwatch" class="card-img-top">
+            <div class="card">
+                <img src="img/hyperx_alpha.jpg" alt="HyperX Alpha" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="d-flex justify-content-center card-title">Time manager</h5>
-                    <p class="card-text">The simple application that has functions of world clocks, alarm, stop watch and timer</p>
-                    <div class="d-flex justify-content-center">
-                        <a href="#" @click="time_toggle">Continue</a>
-                    </div>
+                    <div class="card-title">HyperX Alpha</div>
+                    <div class="card-text">Headset</div>
                 </div>
             </div>
-            <div class="card" id="audio-manager-card">
-                <img src="img/headphones.jpg" alt="headphones" class="card-img-top">
+            <div class="card">
+                <img src="img/hyperx_cloud_orbit.jpg" alt="HyperX Cloud Orbit" class="card-img-top">
                 <div class="card-body">
-                    <h5 class="card-title">Audio manager</h5>
-                    <p class="card-text">Lorem Ipsum</p>
-                    <a href="#" @click="audio_toggle">Continue</a>
+                    <div class="card-title">HyperX Cloud Orbit</div>
+                    <div class="card-text">Headset</div>
                 </div>
             </div>
-            <button class="carousel-3d-btn" id="right-carousel-btn" @click="carousel3d_next"> > </button>
-        </div>
-        <div class="page-container" id="time-manager" v-if="id === 'time-manager'">
-            <div class="d-flex justify-content-center align-items-center" id="time-msg-container">
-                <h1 class="color-aliceblue" id="time-msg">{{this.time.msg}}</h1>
+            <div class="card">
+                <img src="img/logitech_g433.jpg" alt="Logitech G433" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Logitech G-433</div>
+                    <div class="card-text">Headset</div>
+                </div>
             </div>
-            <div class="d-flex justify-content-center" id="timer-buttons">
-                <button class="timer-button text-center" id="start-time" @mouseover="isHover = true" @mouseleave="isHover = false"  @click="startWatch">Resume</button>
-                <button class="timer-button" id="pause-time" @click="stopWatch">Pause</button>
+            <div class="card">
+                <img src="img/logitech_g935.jpg" alt="Logitech G-935" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Logitech G-935</div>
+                    <div class="card-text">Headset</div>
+                </div>
             </div>
-        </div>
-        <div class="page-container" id="audio-manager" v-if="id === 'audio-manager'">
-            <button class="btn btn-primary" id="audio-play-btn" @click="audioPlay">Click me</button>
+            <div class="card">
+                <img src="img/logitech_g_pro_x.jpg" alt="Logitech G Pro X" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Logitech G Pro X</div>
+                    <div class="card-text">Headset</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/xtrfy_h2.jpg" alt="Xtrfy H2" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Xtrfy H2</div>
+                    <div class="headset card-text">Headset</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/dark_project_hs-2.jpg" alt="Dark Project HS-2" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Dark Project HS-2</div>
+                    <div class="card-text">Headset</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/hator_hypergang_evo.png" alt="Hator Hypergang EVO" class="card-img-top">
+                <div class="card-body">
+                    <div class="card-title">Hator Hypergang EVO</div>
+                    <div class="card-text">Headset</div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- External JS script -->
-    <script src="script.js"></script>
 </body>
 </html>
